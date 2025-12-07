@@ -13,7 +13,8 @@ devs_list = [
 
 
 db_url: str = '' # mongo db uri
-db_name = session_name = 'whatsappbot'
+db_name = 'whatsappbot'
+session_name = db_name
 
 
 chatbot_chats: list[int] = []
