@@ -4,12 +4,11 @@ import config
 from neonize.client import NewClient
 from neonize.events import ConnectedEv, PairStatusEv
 
+number = input('Number : ')
 
-session_name = input('Enter session name:') or  config.session_name
+client = NewClient(config.session_name)
+client.PairPhone(number, show_push_notification=True)
 
-client = NewClient(session_name)
-client.connect()
-    
 @client.event(PairStatusEv)
 def on_paired(_: NewClient, message: PairStatusEv):
       print(f"✓ Logged in as: {message.ID.User}")
