@@ -4,26 +4,17 @@ A simple, smart WhatsApp bot built with Python using the neonize library. Deploy
 
 [![GitHub Repo](https://github.com/NandhaxD/whatsApp_Bot)](https://github.com/NandhaxD/whatsApp_Bot)
 
-## 📱 Quick Start - 4 Simple Steps
+## 📱 Quick Start -  Only Two Ways to Step
 
 ### 1. Generate Session File (Termux)
 
 `python gen.py`
 
-- Enter session name (or press Enter for default)
-- Scan QR code with **WhatsApp → Linked Devices**
+- Enter phone number ( format : 91xxxx )
+- Pair the code with **WhatsApp → Linked Devices → Link With Phone Number Instead**
 - Press `Ctrl+\` to exit → **Session file created**
 
-### 2. Save Session File
-
-`mv session_name ~/storage/shared/`
-
-
-### 3. Upload & Configure
-- Upload `session_name` file to your GitHub repo
-- Edit `config.py` → set `session_name = "your_session_filename"`
-
-### 4. Run Bot
+### 2. Run Bot
 
 `python3 -m nandha`
 
@@ -33,9 +24,22 @@ A simple, smart WhatsApp bot built with Python using the neonize library. Deploy
 
 
 ```
-pkg update && pkg upgrade
-pkg install python git
+pkg update -y && pkg upgrade -y
+pkg install python git ffmpeg -y
 pip install -r requirements.txt
+```
+
+## 🌿 Environment
+
+Set your environment using ```mv .env.example .env && nano .env```
+This is the format
+```env
+OWNER_UID=9111111111111  # Owner number 
+OWNER_GUID=211364584902856  # Owner lid
+DB_URL='' # Mongo URI
+DB_NAME='whatsappbot' # Database name
+MAX_COV_CHATS=10
+GROQ_API_KEY='' # Apikey groq
 ```
 
 

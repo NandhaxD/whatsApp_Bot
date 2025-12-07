@@ -1,7 +1,7 @@
 from neonize.client import NewClient
 from neonize.utils import build_jid
 from pymongo import MongoClient
-
+import config
 import logging
 import time
 import config
@@ -25,6 +25,6 @@ log.info('✅ Successfully connected to MongoDB.')
 database = mdb[config.db_name]
 
 self = build_jid(str(config.owner_uid))
-client = NewClient("your_bot_name")
+client = NewClient(config.session_name)
 
 
