@@ -1,2 +1,2 @@
-# whatsApp_Bot
-Whatsappbot by t.me/NandhaBots using python neonize library.
+# WhatsAppBot
+WhatsApp BOT by t.mr/nandhaBots

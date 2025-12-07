@@ -1,0 +1,4 @@
+requests
+pymongo
+neonize
+bs4
